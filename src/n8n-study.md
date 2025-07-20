@@ -524,7 +524,7 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🔍 よく遭遇するステータスコード</h3>
   <div style="display: flex; justify-content: center; margin: 20px 0;">
     <div style="overflow-x: auto; max-width: 100%;">
@@ -1071,11 +1071,7 @@ def handle_webhook():
 https://your-app.com/webhooks/github
 https://your-app.com/webhooks/stripe
 https://your-app.com/webhooks/slack
-
-## n8n での例
-
 https://your-n8n.com/webhook/abc123
-
 </div>
 </div>
 
@@ -1127,14 +1123,12 @@ https://your-n8n.com/webhook/abc123
 ## 4.1 基本的な認証方式
 
 <div class="card animated">
-  <h3>🔐 認証方式の種類</h3>
   
   <div class="grid-2">
     <div>
       <h4>Basic認証</h4>
       <ul>
         <li>ユーザー名とパスワード</li>
-        <li>HTTPヘッダーで送信</li>
         <li>シンプルだが安全性に課題</li>
       </ul>
       <div class="code-example" style="font-size: 0.7em;">
@@ -1147,7 +1141,6 @@ Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
       <h4>トークンベース認証</h4>
       <ul>
         <li>トークンによる認証</li>
-        <li>期限付きの認証情報</li>
         <li>より安全性が高い</li>
       </ul>
       <div class="code-example" style="font-size: 0.7em;">
@@ -1537,8 +1530,7 @@ END FOR
 
 ## 8.1 ハンズオン演習
 
-<div class="card animated">
-  <h3>🛠️ 実践的な演習内容</h3>
+<div>
   
   <div class="grid-2">
     <div>
@@ -1576,7 +1568,7 @@ END FOR
 
 ## 8.2 トラブルシューティング
 
-<div class="card animated">
+<div>
   <h3>🔧 よくある問題と対処法</h3>
   
   <div style="display: flex; justify-content: center; margin: 20px 0;">
@@ -1626,7 +1618,7 @@ END FOR
 
 ## 9.1 n8n との関連性
 
-<div class="card animated">
+<div>
   <h3>🔗 学習内容がn8nでどう使われるか</h3>
   
   <div class="grid-2">
@@ -1653,7 +1645,7 @@ END FOR
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🎯 n8nノード構造との対応</h3>
   
   <div class="grid-3">
@@ -1691,7 +1683,7 @@ END FOR
 
 ## 9.2 次のステップ
 
-<div class="card animated">
+<div >
   <h3>🚀 実践への道筋</h3>
   
   <div class="grid-2">
@@ -1748,7 +1740,7 @@ END FOR
 
 # まとめ
 
-<div class="card animated">
+<div >
   <h3>🎯 学習のポイント</h3>
   
   <div style="display: flex; justify-content: center; margin: 1em 0 2em 0;">
@@ -1778,7 +1770,7 @@ END FOR
 
 ---
 
-<div class="card animated" style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
   <div style="text-align: center;">
     <h2 style="font-size: 36px; margin-bottom: 1em; color: var(--rp-iris);">Thank you for learning!</h2>
     <p style="font-size: 24px; color: var(--rp-foam);">n8nで素晴らしいAIエージェントを開発してください</p>
