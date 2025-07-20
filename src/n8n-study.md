@@ -373,14 +373,10 @@ style: |
     <div>
       <h4 style="color: var(--rp-iris);">リクエスト構成</h4>
       <div class="code-example">
-GET /api/users HTTP/1.1
+GET /api/users/123 HTTP/1.1
 Host: example.com
 Authorization: Bearer token123
 Content-Type: application/json
-
-{
-"name": "John Doe"
-}
 
 </div>
 </div>
@@ -399,6 +395,36 @@ Content-Length: 45
 
 </div>
 </div>
+
+  </div>
+</div>
+
+---
+
+<div class="card animated">
+  <h3>📋 HTTPヘッダーの詳細</h3>
+  
+  <div class="grid-2">
+    <div>
+      <img src="images/http-header.jpg" alt="HTTPヘッダーの構造" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div>
+      <h4>HTTPヘッダーとは</h4>
+      <ul>
+        <li><strong>メタデータの送信</strong>
+          <ul>
+            <li>リクエスト・レスポンスの詳細情報</li>
+            <li>認証情報、コンテンツタイプなど</li>
+          </ul>
+        </li>
+        <li><strong>主要なヘッダー</strong>
+          <ul>
+            <li><code>Content-Type</code>: データ形式</li>
+            <li><code>Authorization</code>: 認証情報</li>
+            <li><code>User-Agent</code>: クライアント情報</li>
+            <li><code>Accept</code>: 受け入れ可能な形式</li>
+          </ul>
+        </li>
 
   </div>
 </div>
@@ -427,7 +453,6 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
       <ul>
         <li><strong>クエリパラメータ</strong>: ?include=profile</li>
         <li><strong>フラグメント</strong>: #section1</li>
-        <li><strong>認証情報</strong>: user:pass@</li>
       </ul>
     </div>
   </div>
@@ -436,7 +461,7 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
 ---
 
 <div class="card animated">
-  <h3>🔧 HTTPメソッド</h3>
+  <h3>🔧 主要なHTTPメソッド</h3>
   
   <div class="grid-4">
     <div style="text-align: center; padding: 1em; background: var(--rp-pine); border-radius: 8px;">
@@ -668,13 +693,6 @@ Content-Type: application/json
 "name": "required string",
 "email": "required string",
 "age": "optional number"
-}
-
-Response: 201 Created
-{
-"id": 123,
-"name": "John Doe",
-"email": "john@example.com"
 }
 
 </div>
@@ -1068,13 +1086,13 @@ https://your-n8n.com/webhook/abc123
 ---
 
 <div class="card animated">
-  <h3>📦 ペイロードの受信</h3>
+  <h3>📦 ペイロード(body)の受信</h3>
   
   <div class="grid-2">
     <div>
       <h4>ペイロードとは</h4>
       <ul>
-        <li>Webhookで送信されるデータ</li>
+        <li>HTTPで送信されるデータ</li>
         <li>JSON形式が多い</li>
         <li>イベントの詳細情報を含む</li>
         <li>サービスごとに形式が異なる</li>
@@ -1527,12 +1545,6 @@ END FOR
     <div>
       <h4>基礎演習</h4>
       <ul>
-        <li><strong>JSONデータの読み書き</strong>
-          <ul>
-            <li>データの抽出と変換</li>
-            <li>データのアウトプット</li>
-          </ul>
-        </li>
         <li><strong>簡単なAPI呼び出し</strong>
           <ul>
             <li>公開APIの利用</li>
@@ -1687,8 +1699,7 @@ END FOR
     <div>
       <h4>環境セットアップ</h4>
       <ol>
-        <li><strong>n8n Cloud</strong>の無料アカウント作成</li>
-        <li>または<strong>Docker</strong>でローカル環境構築</li>
+        <li>Credentialsの登録</li>
         <li>基本的なワークフロー作成</li>
         <li>テスト用APIサービスとの連携</li>
       </ol>
@@ -1696,10 +1707,9 @@ END FOR
     <div>
       <h4>学習リソース</h4>
       <ul>
-        <li><strong>公式ドキュメント</strong>: n8n.io/docs</li>
-        <li><strong>コミュニティフォーラム</strong>: community.n8n.io</li>
-        <li><strong>YouTube チュートリアル</strong>: 実践的な例</li>
-        <li><strong>GitHub</strong>: カスタムノード例</li>
+        <li><strong>公式ドキュメント</strong>: <br>https://docs.n8n.io/</li>
+        <li><strong>コミュニティフォーラム</strong>: <br>https://community.n8n.io/</li>
+        <li><strong>YouTube チュートリアル</strong>: <br>https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI</li>
       </ul>
     </div>
   </div>
@@ -1765,9 +1775,6 @@ END FOR
     </div>
   </div>
 
-  <div style="text-align: center; margin-top: 3em;">
-    <p style="font-size: 28px; font-weight: bold; color: var(--rp-iris);">これらの知識でn8nを最大限活用しよう！</p>
-  </div>
 </div>
 
 ---
@@ -1775,6 +1782,6 @@ END FOR
 <div class="card animated" style="display: flex; justify-content: center; align-items: center; height: 70vh;">
   <div style="text-align: center;">
     <h2 style="font-size: 36px; margin-bottom: 1em; color: var(--rp-iris);">Thank you for learning!</h2>
-    <p style="font-size: 24px; color: var(--rp-foam);">n8nで素晴らしい自動化を実現してください</p>
+    <p style="font-size: 24px; color: var(--rp-foam);">n8nで素晴らしいAIエージェントを開発してください</p>
   </div>
 </div>
