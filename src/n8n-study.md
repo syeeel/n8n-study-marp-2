@@ -846,14 +846,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
       </ul>
     </div>
     <div>
-      <h4>使用例</h4>
       <div class="code-example">
 
-## 基本的な使用
+#### 基本的な使用
 
 /api/users?page=2&limit=10
 
-## フィルタリング
+#### フィルタリング
 
 /api/products?category=electronics&price_min=100
 
