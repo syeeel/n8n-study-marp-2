@@ -1447,105 +1447,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ---
 
-# 7. ワークフロー設計の考え方
-
-## 7.1 自動化の基本概念
-
-<div>
-  <h3>⚙️ トリガーとアクション</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>トリガー（きっかけ）</h4>
-      <ul>
-        <li><strong>時間ベース</strong>: 定期実行、特定時刻</li>
-        <li><strong>イベントベース</strong>: Webhook、ファイル変更</li>
-        <li><strong>手動</strong>: ユーザーが実行</li>
-        <li><strong>条件ベース</strong>: 特定条件を満たした時</li>
-      </ul>
-    </div>
-    <div>
-      <h4>アクション（実行内容）</h4>
-      <ul>
-        <li><strong>データ取得</strong>: API呼び出し、DB検索</li>
-        <li><strong>データ変換</strong>: フォーマット変更、計算</li>
-        <li><strong>通知</strong>: メール、Slack、SMS</li>
-        <li><strong>データ保存</strong>: DB書き込み、ファイル作成</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-<div>
-  <h3>🌊 条件分岐とループ処理</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>条件分岐</h4>
-      <ul>
-        <li>IF-THEN-ELSE の論理</li>
-        <li>データに基づく判断</li>
-        <li>複数の処理パス</li>
-        <li>動的な処理選択</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-IF user.role == "admin"
-  THEN grant_full_access()
-  ELSE grant_limited_access()
-      </div>
-    </div>
-    <div>
-      <h4>ループ処理</h4>
-      <ul>
-        <li>配列データの一括処理</li>
-        <li>繰り返し処理の自動化</li>
-        <li>大量データの効率的処理</li>
-        <li>バッチ処理の実現</li>
-      </ul>
-      <div class="code-example" style="font-size: 0.6em;">
-FOR EACH user IN users
-  send_notification(user.email)
-END FOR
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-## 7.2 実用的なワークフロー例
-
-<div>
-  <h3>💼 ビジネスワークフロー例</h3>
-  
-  <div class="grid-2">
-    <div>
-      <h4>データ同期ワークフロー</h4>
-      <ol style="font-size: 0.9em;">
-        <li>定期的にシステムAからデータ取得</li>
-        <li>データ形式をシステムB用に変換</li>
-        <li>重複チェックと差分抽出</li>
-        <li>システムBにデータ送信</li>
-        <li>結果をSlackに通知</li>
-      </ol>
-    </div>
-    <div>
-      <h4>承認プロセスワークフロー</h4>
-      <ol style="font-size: 0.9em;">
-        <li>申請フォームの提出をトリガー</li>
-        <li>申請内容の自動チェック</li>
-        <li>承認者にメール通知</li>
-        <li>承認結果の自動判定</li>
-        <li>申請者に結果通知</li>
-      </ol>
-    </div>
-  </div>
-</div>
-
----
-
 # 8. 変数とデータ管理
 
 ## 8.1 変数の基本概念
@@ -1645,9 +1546,108 @@ o = 0 // 数字の 0 と混同
 
 ---
 
-# 9. 実習・演習
+# 9. ワークフロー設計の考え方
 
-## 9.1 ハンズオン演習
+## 9.1 自動化の基本概念
+
+<div>
+  <h3>⚙️ トリガーとアクション</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>トリガー（きっかけ）</h4>
+      <ul>
+        <li><strong>時間ベース</strong>: 定期実行、特定時刻</li>
+        <li><strong>イベントベース</strong>: Webhook、ファイル変更</li>
+        <li><strong>手動</strong>: ユーザーが実行</li>
+        <li><strong>条件ベース</strong>: 特定条件を満たした時</li>
+      </ul>
+    </div>
+    <div>
+      <h4>アクション（実行内容）</h4>
+      <ul>
+        <li><strong>データ取得</strong>: API呼び出し、DB検索</li>
+        <li><strong>データ変換</strong>: フォーマット変更、計算</li>
+        <li><strong>通知</strong>: メール、Slack、SMS</li>
+        <li><strong>データ保存</strong>: DB書き込み、ファイル作成</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<div>
+  <h3>🌊 条件分岐とループ処理</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>条件分岐</h4>
+      <ul>
+        <li>IF-THEN-ELSE の論理</li>
+        <li>データに基づく判断</li>
+        <li>複数の処理パス</li>
+        <li>動的な処理選択</li>
+      </ul>
+      <div class="code-example" style="font-size: 0.6em;">
+IF user.role == "admin"
+  THEN grant_full_access()
+  ELSE grant_limited_access()
+      </div>
+    </div>
+    <div>
+      <h4>ループ処理</h4>
+      <ul>
+        <li>配列データの一括処理</li>
+        <li>繰り返し処理の自動化</li>
+        <li>大量データの効率的処理</li>
+        <li>バッチ処理の実現</li>
+      </ul>
+      <div class="code-example" style="font-size: 0.6em;">
+FOR EACH user IN users
+  send_notification(user.email)
+END FOR
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## 9.2 実用的なワークフロー例
+
+<div>
+  <h3>💼 ビジネスワークフロー例</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>データ同期ワークフロー</h4>
+      <ol style="font-size: 0.9em;">
+        <li>定期的にシステムAからデータ取得</li>
+        <li>データ形式をシステムB用に変換</li>
+        <li>重複チェックと差分抽出</li>
+        <li>システムBにデータ送信</li>
+        <li>結果をSlackに通知</li>
+      </ol>
+    </div>
+    <div>
+      <h4>承認プロセスワークフロー</h4>
+      <ol style="font-size: 0.9em;">
+        <li>申請フォームの提出をトリガー</li>
+        <li>申請内容の自動チェック</li>
+        <li>承認者にメール通知</li>
+        <li>承認結果の自動判定</li>
+        <li>申請者に結果通知</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+---
+
+# 10. 実習・演習
+
+## 10.1 ハンズオン演習
 
 <div>
   
@@ -1679,7 +1679,7 @@ o = 0 // 数字の 0 と混同
 
 ---
 
-## 9.2 トラブルシューティング
+## 10.2 トラブルシューティング
 
 <div>
   <h3>🔧 よくある問題と対処法</h3>
@@ -1727,9 +1727,9 @@ o = 0 // 数字の 0 と混同
 
 ---
 
-# 10. n8n への橋渡し
+# 11. n8n への橋渡し
 
-## 10.1 n8n との関連性
+## 11.1 n8n との関連性
 
 <div>
   <h3>🔗 学習内容がn8nでどう使われるか</h3>
