@@ -325,7 +325,21 @@ style: |
 
 # 目次
 
-## Part 3: n8n への橋渡し
+## Part 3: 変数とデータ管理
+
+<div class="card animated">
+  <ol>
+    <li><strong>変数の基本概念</strong> - 変数とは何か・なぜ必要か</li>
+    <li><strong>変数の種類と使い方</strong> - 各種変数の特徴と活用</li>
+    <li><strong>n8nでの変数活用</strong> - 実践的な変数の使い方</li>
+  </ol>
+</div>
+
+---
+
+# 目次
+
+## Part 4: n8n への橋渡し
 
 <div class="card animated">
   <ol>
@@ -1526,6 +1540,105 @@ END FOR
 
 ---
 
+# 9. 変数とデータ管理
+
+## 9.1 変数の基本概念
+
+<div>
+  <h3>📦 変数とは何か</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>変数の定義</h4>
+      <ul>
+        <li>データを一時的に保存する「箱」</li>
+        <li>名前をつけてデータを管理</li>
+        <li>プログラムの実行中に値が変化</li>
+        <li>データの再利用を可能にする</li>
+      </ul>
+    </div>
+    <div>
+      <h4>変数の利点</h4>
+      <ul>
+        <li><strong>再利用性</strong> - 同じデータを複数回使用</li>
+        <li><strong>可読性</strong> - 意味のある名前でデータ管理</li>
+        <li><strong>保守性</strong> - 値の変更が容易</li>
+        <li><strong>効率性</strong> - メモリの効率的利用</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="highlight-box">
+    <strong>例</strong>: <code>userName = "田中太郎"</code> → <code>userName</code>という名前で「田中太郎」というデータを保存
+  </div>
+</div>
+
+---
+
+<div>
+  <h3>🏷️ 変数の命名とベストプラクティス</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>良い変数名の例</h4>
+      <div class="code-example" style="font-size: 0.8em;">
+
+// 意味が分かりやすい
+userName = "田中太郎"
+userAge = 25
+totalPrice = 1500
+isLoggedIn = true
+
+</div>
+</div>
+<div>
+<h4>避けるべき変数名</h4>
+<div class="code-example" style="font-size: 0.8em;">
+
+// 意味が不明
+x = "田中太郎"
+flag = true
+
+// 予約語や紛らわしい名前
+class = "user"
+o = 0 // 数字の 0 と混同
+
+</div>
+</div>
+
+  </div>
+  
+  <div class="highlight-box">
+    <strong>ポイント</strong>: 変数名は他の人（未来の自分を含む）が見ても分かりやすいものにする
+  </div>
+</div>
+
+---
+
+## 9.3 n8n での変数活用
+
+<div>
+  <h3>⚙️ n8nにおける変数の使い方</h3>
+  
+  <div class="grid-2">
+    <div>
+      <h4>Expressionでの変数参照</h4>
+      <ul>
+        <li><strong>前のノードのデータ</strong>: <code>{{$json.propertyName}}</code></li>
+        <li><strong>ワークフロー変数</strong>: <code>{{$vars.variableName}}</code></li>
+        <li><strong>環境変数</strong>: <code>{{$env.ENV_VAR_NAME}}</code></li>
+        <li><strong>ノード特定</strong>: <code>{{$node["Node Name"].json.data}}</code></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="highlight-box">
+    <strong>重要</strong>: n8nでは<code>{{}}</code>を使ってExpressionを記述し、動的にデータを参照・操作します
+  </div>
+</div>
+
+---
+
 # 8. 実習・演習
 
 ## 8.1 ハンズオン演習
@@ -1608,9 +1721,9 @@ END FOR
 
 ---
 
-# 9. n8n への橋渡し
+# 10. n8n への橋渡し
 
-## 9.1 n8n との関連性
+## 10.1 n8n との関連性
 
 <div>
   <h3>🔗 学習内容がn8nでどう使われるか</h3>
@@ -1675,7 +1788,7 @@ END FOR
 
 ---
 
-## 9.2 次のステップ
+## 10.2 次のステップ
 
 <div >
   <h3>🚀 実践への道筋</h3>
@@ -1707,22 +1820,22 @@ END FOR
   
   <div style="text-align: center; margin: 2em 0;">
     <div style="display: flex; justify-content: space-around; align-items: center;">
-      <div style="text-align: center; padding: 1em; background: var(--rp-iris); border-radius: 8px; width: 20%;">
+      <div style="text-align: center; padding: 1em; background: var(--rp-iris); border-radius: 8px; width: 18%;">
         <h4 style="color: white; margin-bottom: 0.5em;">1</h4>
         <p style="color: white; font-size: 0.9em; margin: 0;">基本ワークフロー</p>
       </div>
-      <div style="font-size: 2em; color: var(--rp-muted);">→</div>
-      <div style="text-align: center; padding: 1em; background: var(--rp-foam); border-radius: 8px; width: 20%;">
+      <div style="font-size: 1.5em; color: var(--rp-muted);">→</div>
+      <div style="text-align: center; padding: 1em; background: var(--rp-foam); border-radius: 8px; width: 18%;">
         <h4 style="color: white; margin-bottom: 0.5em;">2</h4>
         <p style="color: white; font-size: 0.9em; margin: 0;">API連携</p>
       </div>
-      <div style="font-size: 2em; color: var(--rp-muted);">→</div>
-      <div style="text-align: center; padding: 1em; background: var(--rp-gold); border-radius: 8px; width: 20%;">
+      <div style="font-size: 1.5em; color: var(--rp-muted);">→</div>
+      <div style="text-align: center; padding: 1em; background: var(--rp-gold); border-radius: 8px; width: 18%;">
         <h4 style="color: white; margin-bottom: 0.5em;">3</h4>
-        <p style="color: white; font-size: 0.9em; margin: 0;">データ処理</p>
+        <p style="color: white; font-size: 0.9em; margin: 0;">変数活用</p>
       </div>
-      <div style="font-size: 2em; color: var(--rp-muted);">→</div>
-      <div style="text-align: center; padding: 1em; background: var(--rp-rose); border-radius: 8px; width: 20%;">
+      <div style="font-size: 1.5em; color: var(--rp-muted);">→</div>
+      <div style="text-align: center; padding: 1em; background: var(--rp-rose); border-radius: 8px; width: 18%;">
         <h4 style="color: white; margin-bottom: 0.5em;">4</h4>
         <p style="color: white; font-size: 0.9em; margin: 0;">本格運用</p>
       </div>
@@ -1752,8 +1865,12 @@ END FOR
           <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">3</span>
           <span><strong>JSONデータ処理</strong> - 現代のデータ交換標準</span>
         </li>
-        <li style="display: flex; align-items: center;">
+        <li style="margin-bottom: 1em; display: flex; align-items: center;">
           <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">4</span>
+          <span><strong>変数とデータ管理</strong> - 効率的なデータ操作</span>
+        </li>
+        <li style="display: flex; align-items: center;">
+          <span style="background-color: var(--rp-iris); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-right: 10px;">5</span>
           <span><strong>ワークフロー思考</strong> - 自動化の設計思想</span>
         </li>
       </ul>
