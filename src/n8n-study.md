@@ -316,8 +316,6 @@ style: |
   <ol>
     <li><strong>データ形式の基礎</strong> - JSON・データ構造</li>
     <li><strong>データ処理の基礎</strong> - 変換・エラーハンドリング</li>
-    <li><strong>ワークフロー設計</strong> - 自動化の考え方</li>
-    <li><strong>実習・演習</strong> - ハンズオン・トラブルシューティング</li>
   </ol>
 </div>
 
@@ -343,6 +341,8 @@ style: |
 
 <div class="card animated">
   <ol>
+    <li><strong>ワークフロー設計</strong> - 自動化の考え方</li>
+    <li><strong>実習・演習</strong> - ハンズオン・トラブルシューティング</li>
     <li><strong>n8nとの関連性</strong> - 学習内容の活用</li>
     <li><strong>次のステップ</strong> - 実践への道筋</li>
   </ol>
@@ -354,7 +354,7 @@ style: |
 
 ## 1.1 HTTP プロトコル
 
-<div class="card animated">
+<div>
   <h3>🌐 インターネット通信の仕組み</h3>
   <div class="grid-2">
     <div>
@@ -380,7 +380,7 @@ style: |
 
 ---
 
-<div class="card animated">
+<div>
   <h3>📡 HTTPリクエストとレスポンス</h3>
   
   <div class="grid-2">
@@ -415,7 +415,7 @@ Content-Length: 45
 
 ---
 
-<div class="card animated">
+<div>
   <h3>📋 HTTPヘッダーの詳細</h3>
   
   <div class="grid-2">
@@ -445,7 +445,7 @@ Content-Length: 45
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🔗 URL（URI）の構造</h3>
   
   <div class="code-example" style="margin: 1em 0;">
@@ -593,7 +593,7 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
 
 ## 2.1 API の基本概念
 
-<div class="card animated">
+<div>
   <h3>🔌 APIとは何か</h3>
   
   <div class="grid-2">
@@ -620,7 +620,7 @@ https://api.example.com:443/v1/users/123?include=profile&format=json#section1
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🏗️ REST APIの概念</h3>
   
   <div class="highlight-box">
@@ -652,7 +652,7 @@ DELETE /api/users/123  # ユーザー削除
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🎯 エンドポイントとは</h3>
   
   <div class="grid-2">
@@ -681,7 +681,7 @@ https://api.github.com/repos/owner/repo/issues
 
 ---
 
-<div class="card animated">
+<div>
   <h3>📖 APIドキュメントの読み方</h3>
   
   <div class="grid-2">
@@ -719,7 +719,7 @@ Content-Type: application/json
 
 ## 2.2 API 認証
 
-<div class="card animated">
+<div>
   <h3>🔐 APIキーによる認証</h3>
   
   <div class="grid-2">
@@ -749,7 +749,7 @@ X-API-Key: your-api-key-here
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🔄 OAuth 2.0の基本</h3>
   
   <div class="highlight-box">
@@ -780,7 +780,7 @@ X-API-Key: your-api-key-here
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🎫 Bearer Token</h3>
   
   <div class="grid-2">
@@ -846,7 +846,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ## 2.3 API リクエストの実践
 
-<div class="card animated">
+<div>
   <h3>❓ クエリパラメータ</h3>
   
   <div class="grid-2">
@@ -878,7 +878,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ---
 
-<div class="card animated">
+<div>
   <h3>📋 リクエストヘッダー</h3>
   
   <div class="grid-2">
@@ -994,7 +994,7 @@ X-Rate-Limit-Remaining: 99
 
 ## 3.1 Webhook の基本
 
-<div class="card animated">
+<div>
   <h3>🔔 Webhookとは何か</h3>
   
   <div class="grid-2">
@@ -1021,7 +1021,8 @@ X-Rate-Limit-Remaining: 99
 
 ---
 
-<div class="card animated">
+<div>
+
   <h3>🔄 プッシュ型通信 vs プル型通信</h3>
   
   <div class="grid-2">
@@ -1066,7 +1067,7 @@ def handle_webhook():
 
 ## 3.2 Webhook の実装
 
-<div class="card animated">
+<div>
   <h3>⚙️ Webhookエンドポイントの設定</h3>
   
   <div class="grid-2">
@@ -1136,7 +1137,7 @@ https://your-n8n.com/webhook/abc123
 
 ## 4.1 基本的な認証方式
 
-<div class="card animated">
+<div>
   
   <div class="grid-2">
     <div>
@@ -1208,7 +1209,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ## 5.1 JSON（JavaScript Object Notation）
 
-<div class="card animated">
+<div>
   <h3>📄 JSONとは何か</h3>
   
   <div class="grid-2">
@@ -1279,7 +1280,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ## 5.2 データ構造の基本
 
-<div class="card animated">
+<div>
   <h3>🏗️ データ構造の基本概念</h3>
   
   <div class="grid-2">
@@ -1372,7 +1373,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ## 6.1 データの変換
 
-<div class="card animated">
+<div>
   <h3>🔄 データ変換の種類</h3>
   
   <div class="grid-2">
@@ -1445,7 +1446,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ## 7.1 自動化の基本概念
 
-<div class="card animated">
+<div>
   <h3>⚙️ トリガーとアクション</h3>
   
   <div class="grid-2">
@@ -1472,7 +1473,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ---
 
-<div class="card animated">
+<div>
   <h3>🌊 条件分岐とループ処理</h3>
   
   <div class="grid-2">
@@ -1511,7 +1512,7 @@ END FOR
 
 ## 7.2 実用的なワークフロー例
 
-<div class="card animated">
+<div>
   <h3>💼 ビジネスワークフロー例</h3>
   
   <div class="grid-2">
@@ -1540,9 +1541,9 @@ END FOR
 
 ---
 
-# 9. 変数とデータ管理
+# 8. 変数とデータ管理
 
-## 9.1 変数の基本概念
+## 8.1 変数の基本概念
 
 <div>
   <h3>📦 変数とは何か</h3>
@@ -1615,7 +1616,7 @@ o = 0 // 数字の 0 と混同
 
 ---
 
-## 9.3 n8n での変数活用
+## 8.3 n8n での変数活用
 
 <div>
   <h3>⚙️ n8nにおける変数の使い方</h3>
@@ -1639,9 +1640,9 @@ o = 0 // 数字の 0 と混同
 
 ---
 
-# 8. 実習・演習
+# 9. 実習・演習
 
-## 8.1 ハンズオン演習
+## 9.1 ハンズオン演習
 
 <div>
   
@@ -1673,7 +1674,7 @@ o = 0 // 数字の 0 と混同
 
 ---
 
-## 8.2 トラブルシューティング
+## 9.2 トラブルシューティング
 
 <div>
   <h3>🔧 よくある問題と対処法</h3>
