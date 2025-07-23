@@ -103,6 +103,11 @@ style: |
     font-size: 0.8em;
   }
 
+  /* タイトルスライドのフッターを非表示 */
+  section.title-slide footer {
+    display: none;
+  }
+
   /* 画像のスタイル */
   section img {
     max-width: 80%;
@@ -287,7 +292,7 @@ style: |
 
 # <span>Basic IT & n8n</span>
 
-## AI ワークフロー自動化プラットフォーム
+## AI エージェント開発プラットフォーム
 
 <!-- _class: title-slide -->
 
