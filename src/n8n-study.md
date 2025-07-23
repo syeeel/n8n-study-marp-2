@@ -1553,12 +1553,6 @@ END FOR
             <li>データの処理と保存</li>
           </ul>
         </li>
-        <li><strong>データ変換の実践</strong>
-          <ul>
-            <li>複雑なデータ構造の変換</li>
-            <li>条件分岐の実装</li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>
